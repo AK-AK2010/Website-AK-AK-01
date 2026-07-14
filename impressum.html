@@ -632,14 +632,29 @@
   nav ul li .dropdown a:last-child { border-bottom: none; }
   .has-dropdown > a::after { content: " ▾"; font-size: 0.7rem; }
 
-  .impressum-section { margin-bottom: 32px; }
+  .impressum-section {
+    padding: 20px 0 8px 0;
+    border-top: 1px solid #A71F38;
+  }
+  .impressum-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+  .impressum-section h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1A2C4E;
+    margin-bottom: 8px;
+    border-bottom: none !important;
+    padding-bottom: 0;
+  }
   .impressum-section h3 {
     font-size: 1rem;
     font-weight: 700;
     color: #1A2C4E;
     margin-bottom: 8px;
     padding-bottom: 6px;
-    border-bottom: 1px solid #E6E1DD;
+    border-bottom: none !important;
   }
   .impressum-section p {
     font-size: 0.95rem;
