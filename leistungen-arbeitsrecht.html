@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anwaltskanzlei Andrea Knebel | Arbeitsrecht & Sozialrecht Ettlingen</title>
+<style>
+  :root{
+    --bordeaux: #A71F38;
+    --bordeaux-dark: #841729;
+    --ink: #1A2C4E;
+    --paper: #FFFFFF;
+    --paper-alt: #F7F5F4;
+    --gold: #EDE0C4;
+    --border: #E6E1DD;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    line-height: 1.65;
+    background: var(--paper);
+  }
+
+  h1,h2,h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .eyebrow{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bordeaux);
+    font-weight: 700;
+  }
+
+  a{color: var(--bordeaux); text-decoration:none;}
+
+  .container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header{
+    position: sticky;
+    top:0;
+    background: var(--paper);
+    z-index: 100;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .header-top{
+    background: var(--paper);
+    padding: 40px 0 40px 0;
+    text-align: center;
+  }
+  .header-top .kanzlei-name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: var(--bordeaux);
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+  }
+  .kanzlei-name .big{
+    font-size: 50px;
+  }
+  .kanzlei-name .small{
+    font-size: 44px;
+  }
+  .header-top .kanzlei-sub{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--bordeaux);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .header-top .kanzlei-info{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--bordeaux);
+    margin-top: 6px;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+  .header-top .kanzlei-info a{
+    color: var(--bordeaux);
+    text-decoration: none;
+  }
+  .header-top .kanzlei-info a:hover{
+    color: var(--bordeaux-dark);
+  }
+  .header-nav{
+    background: #1A2C4E;
+    border-top: 2px solid var(--bordeaux);
+    border-bottom: 2px solid var(--bordeaux);
+    padding: 0;
+  }
+  .header-nav .container{
+    display: flex;
+    justify-content: center;
+  }
+  nav ul{
+    display:flex;
+    gap: 0;
+    list-style:none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+  }
+  nav ul li a{
+    display: block;
+    padding: 15px 22px;
+    color: #EDE0C4;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+  }
+  nav ul li a:hover,
+  nav ul li a.active{
+    background: #A71F38;
+    color: #ffffff;
+  }
+
+  /* Hero */
+  .hero{
+    background: #ffffff;
+    padding: 40px 0 0 0;
+  }
+  .hero-inner{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+  }
+  .hero-main{
+    flex: 1.2;
+  }
+  .hero-divider{
+    width: 2px;
+    background: #A71F38;
+    align-self: stretch;
+  }
+  .hero-news{
+    flex: 0.8;
+    border-left: none;
+    padding-left: 20px;
+  }
+  .hero-news .news-label{
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #A71F38;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .hero-news .news-title{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1A2C4E;
+    margin-bottom: 8px;
+  }
+  .hero-news .news-text{
+    font-size: 1rem;
+    color: #1A2C4E;
+    line-height: 1.65;
+    margin-bottom: 12px;
+    text-align: justify;
+  }
+  .hero-news .news-link{
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #EDE0C4;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid #EDE0C4;
+    background: #1A2C4E;
+    padding: 12px 24px;
+    border-radius: 2px;
+    transition: all 0.2s;
+    margin-top: 4px;
+  }
+  .hero-news .news-link:hover{background: #EDE0C4; color: #1A2C4E;}
+  .hero h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1.35;
+    margin-bottom: 28px;
+    color: #1A2C4E;
+    text-shadow: none;
+  }
+  .hero h1 .accent{color: #EDE0C4;}
+  .hero .subtitle{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+    color: #1A2C4E;
+    margin-bottom: 28px;
+  }
+  .hero .meta{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+    display:flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    color: #1A2C4E;
+  }
+  .hero .meta strong{color: #1A2C4E;}
+
+  .btn{
+    display:inline-block;
+    background: var(--bordeaux);
+    color: var(--paper);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 13px 28px;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .btn:hover{background: var(--bordeaux-dark);}
+  .btn-outline{
+    display:inline-block;
+    border: 1px solid #EDE0C4;
+    color: #EDE0C4;
+    background: #1A2C4E;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border-radius: 2px;
+    margin-left: 12px;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover{background: #EDE0C4; color:#1A2C4E; border-color:#1A2C4E;}
+
+  /* Intro */
+  .intro{
+    padding: 40px 0 40px 0;
+  }
+  .intro .container{
+    padding-bottom: 0;
+  }
+  .intro .eyebrow{margin-bottom: 12px;}
+  .intro h2{
+    font-size: 2rem;
+    line-height: 1.35;
+    margin-bottom: 28px;
+    max-width: 600px;
+  }
+  .intro p{
+    max-width: 680px;
+    margin-bottom: 18px;
+    color: #1A2C4E;
+    text-align: justify;
+  }
+  .intro p:last-of-type{
+    margin-bottom: 0;
+  }
+  .intro a{font-weight:600;}
+
+
+
+  /* News */
+  .news{
+    padding: 60px 0;
+    background: var(--paper-alt);
+    border-bottom: 1px solid var(--border);
+  }
+  .news-box{
+    border: 1px solid var(--border);
+    background: var(--paper);
+    padding: 32px 36px;
+    border-left: 4px solid var(--bordeaux);
+  }
+  .news-box .eyebrow{margin-bottom:10px;}
+  .news-box h3{
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+  }
+  .news-box p{color:#1A2C4E; max-width: 720px;}
+  .news-box p + p{margin-top: 10px; font-weight:600;}
+
+  /* Services */
+  .services{
+    padding: 0 0 40px 0;
+  }
+  .services > .container > .eyebrow{margin-bottom:12px;}
+  .services h2{
+    font-size: 2rem;
+    margin-bottom: 28px;
+    max-width: 600px;
+  }
+  .service-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid #A71F38;
+    align-items: stretch;
+  }
+  .service-card{
+    padding: 40px 32px;
+    border-right: 1px solid #A71F38;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card .link{
+    margin-top: auto;
+  }
+  .service-card:last-child{border-right:none;}
+  .service-icon{
+    width: 56px;
+    height: 56px;
+    margin-bottom: 22px;
+  }
+  .service-icon svg{
+    width: 100%;
+    height: 100%;
+  }
+  .service-card h3{
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+  }
+  .service-card p{
+    color:#1A2C4E;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    text-align: justify;
+  }
+  .service-card .btn-wrap{
+    margin-top: auto;
+    padding-top: 22px;
+  }
+  .service-card .link{
+    display: inline-block;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 1px solid #EDE0C4;
+    color: #EDE0C4;
+    background: #1A2C4E;
+    padding: 9px 18px;
+    border-radius: 2px;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+  .service-card .link::after{content:" →";}
+  .service-card .link:hover{background: #EDE0C4; color: #1A2C4E;}
+
+  /* Contact */
+  .contact{
+    background: var(--paper);
+    padding: 0 0 40px 0;
+  }
+  .contact-header{
+    background: #1A2C4E;
+    padding: 14px 24px;
+    margin-bottom: 0;
+    border-top: 2px solid var(--bordeaux);
+    border-bottom: 2px solid var(--bordeaux);
+  }
+  .contact-header-title{
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #EDE0C4;
+    font-weight: 700;
+  }
+  .contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    background: var(--paper);
+    align-items: stretch;
+  }
+  .contact-col{
+    padding: 40px 24px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+  }
+  .contact-col:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 40px;
+    bottom: 40px;
+    width: 2px;
+    background: #A71F38;
+  }
+  .contact-col-label{
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bordeaux);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .contact-col-name{
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1A2C4E;
+    margin-bottom: 10px;
+  }
+  .contact-col p{
+    color: #1A2C4E;
+    line-height: 1.9;
+    margin: 0;
+  }
+  .contact-col .icon{
+    color: var(--bordeaux);
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .hours-row{
+    display: flex;
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 6px 0;
+    border-bottom: 0.5px solid var(--border);
+    color: #1A2C4E;
+  }
+  .hours-row:last-child{border-bottom: none;}
+  .hours-row .day{
+    font-weight: 600;
+    color: #1A2C4E;
+  }
+  .hours-note{
+    margin-top: 14px;
+    font-size: 0.78rem;
+    color: #1A2C4E;
+    font-style: italic;
+  }
+  .map-placeholder{
+    background: #eee;
+    border: 1px solid var(--border);
+    height: calc(100% - 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1A2C4E;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+
+  /* Footer */
+  footer{
+    background: #1A2C4E;
+    color: #EDE0C4;
+    padding: 15px 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    border-top: 2px solid var(--bordeaux);
+  }
+  .footer-inner{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-center{
+    text-align:center;
+  }
+  footer a{color: #EDE0C4; font-weight:700; padding: 2px 6px; border-radius:2px; transition: background 0.2s, color 0.2s;}
+  footer a:hover, footer a.active{background: #A71F38; color: #fff;}
+  .footer-links{display:flex; gap: 24px;}
+  .footer-copy{color: #EDE0C4; font-size: 0.85rem; font-weight: 700;}
+
+  /* Responsive */
+  /* ── Tablet (768px) ── */
+  @media (max-width: 900px){
+    /* Header */
+    .header-top .kanzlei-name .big{ font-size: 32px; }
+    .header-top .kanzlei-name .small{ font-size: 28px; }
+    .header-top .kanzlei-sub{ font-size: 16px; }
+    .header-top .kanzlei-info{ font-size: 13px; white-space: normal; text-align: center; }
+    nav ul{ gap: 0; }
+    nav ul li a{ padding: 12px 14px; font-size: 0.82rem; }
+
+    /* Hero */
+    .hero{ padding: 40px 0; }
+    .hero-inner{ flex-direction: column; gap: 24px; }
+    .hero-divider{ width: 100%; height: 2px; align-self: auto; border-left: none; background: #A71F38; }
+    .hero h1{ font-size: 1.6rem; }
+    .hero-news{ border-left: none; padding-left: 0; padding-top: 16px; }
+
+    /* Leistungskacheln */
+    .service-grid{ grid-template-columns: 1fr; }
+    .service-card{ border-right: none; border-bottom: 1px solid #A71F38; }
+    .service-card:last-child{ border-bottom: none; }
+
+    /* Kontakt */
+    .contact-grid{ grid-template-columns: 1fr; }
+    .contact-col:not(:last-child)::after{ display: none; }
+    .contact-col{ border-bottom: 1px solid #A71F38; }
+    .contact-col:last-child{ border-bottom: none; }
+    .map-placeholder{ min-height: 200px; height: 200px; }
+  }
+
+  /* ── Smartphone (480px) ── */
+  @media (max-width: 480px){
+    /* Header */
+    .header-top{ padding: 10px 16px; }
+    .header-top .kanzlei-name .big{ font-size: 24px; }
+    .header-top .kanzlei-name .small{ font-size: 21px; }
+    .header-top .kanzlei-sub{ font-size: 13px; }
+    .header-top .kanzlei-info{ font-size: 11px; }
+    .header-nav .container{ justify-content: flex-start; overflow-x: auto; }
+    nav ul li a{ padding: 10px 12px; font-size: 0.78rem; }
+
+    /* Hero */
+    .hero{ padding: 32px 0; }
+    .hero h1{ font-size: 1.4rem; line-height: 1.3; }
+    .hero .meta{ flex-direction: column; gap: 8px; font-size: 0.9rem; }
+
+    /* Sections */
+    .intro{ padding: 40px 0 20px 0; }
+    .services{ padding: 20px 0 50px 0; }
+    .intro h2{ font-size: 1.4rem; }
+    .services h2{ font-size: 1.3rem; }
+
+    /* Kontakt */
+    .contact-header{ padding: 12px 16px; }
+    .contact-col{ padding: 20px 16px; }
+
+    /* Footer */
+    .footer-inner{ flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+  }
+
+  /* Accessibility: focus states */
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--bordeaux);
+    outline-offset: 3px;
+  }
+
+  /* Skip-Link */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    background: #A71F38;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    z-index: 9999;
+    border-radius: 0 0 4px 4px;
+    transition: top 0.2s;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Sticky Legal Bar */
+  .sticky-legal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1A2C4E;
+    border-top: 2px solid #A71F38;
+    padding: 5px 16px;
+    display: block;
+    text-align: center;
+    z-index: 99;
+    font-size: 0.85rem;
+    color: #EDE0C4;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sticky-legal a {
+    color: #EDE0C4;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 2px 6px;
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .sticky-legal a:hover, .sticky-legal a.active {
+    background: #A71F38;
+    color: #fff;
+  }
+  /* Abstand damit Inhalt nicht verdeckt wird */
+  body { padding-bottom: 36px; }
+
+
+  /* Dropdown Navigation */
+  nav ul li { position: relative; }
+  nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1A2C4E;
+    border-top: 2px solid #A71F38;
+    min-width: 220px;
+    z-index: 200;
+  }
+  nav ul li:hover .dropdown { display: block; }
+  nav ul li .dropdown a {
+    display: block;
+    padding: 10px 18px;
+    color: #EDE0C4;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(167,31,56,0.3);
+    white-space: nowrap;
+  }
+  nav ul li .dropdown a:hover { background: #A71F38; color: #fff; }
+  nav ul li .dropdown a:last-child { border-bottom: none; }
+  .has-dropdown > a::after { content: " ▾"; font-size: 0.7rem; }
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
+<header>
+  <div class="header-top">
+    <div class="container">
+      <a href="index.html" style="text-decoration:none;"><div class="kanzlei-name"><span class="big">A</span><span class="small">NWALTS</span><span class="big">K</span><span class="small">ANZLEI&nbsp;</span><span class="big">A</span><span class="small">NDREA&nbsp;</span><span class="big">K</span><span class="small">NEBEL</span></div></a>
+      <div class="kanzlei-sub">Kanzlei f&uuml;r Arbeits- und Sozialrecht</div>
+      <div class="kanzlei-info">
+        Rechtsanw&auml;ltin &middot; Fachanw&auml;ltin f&uuml;r Arbeitsrecht &middot; Fachanw&auml;ltin f&uuml;r Sozialrecht &middot; D - 76275 Ettlingen
+      </div>
+    </div>
+  </div>
+  <div class="header-nav">
+    <div class="container">
+      <nav aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html" aria-label="Home" ><i class="ti ti-home" style="font-size:20px; vertical-align:-3px;"></i></a></li>
+          <li><a href="kanzlei.html" >Kanzlei</a></li>
+          <li class="has-dropdown"><a href="leistungen.html" class="active">Leistungen</a><div class="dropdown"><a href="leistungen-arbeitsrecht.html">Arbeitsrecht</a><a href="leistungen-sozialrecht.html">Sozialrecht</a><a href="leistungen-vorsorgeplanung.html">Vorsorgeplanung</a></div></li>
+          <li><a href="vita.html" >Vita</a></li>
+          <li class="has-dropdown"><a href="fachanwalt.html" >Fachanwalt</a><div class="dropdown"><a href="fortbildungen-arbeitsrecht.html">Fortbildungen Arbeitsrecht</a><a href="fortbildungen-sozialrecht.html">Fortbildungen Sozialrecht</a></div></li>
+          <li><a href="kosten.html" >Kosten</a></li>
+          <li><a href="kontakt.html" >Kontakt</a></li>
+          <!-- <li><a href="news.html" >News</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+<section class="intro">
+  <div class="container">
+    <div style="max-width:680px; text-align:justify;">
+    <p class="eyebrow" style="color:var(--bordeaux); margin-top:0; margin-bottom:12px;">Leistungen · Arbeitsrecht</p>
+    <h2 style="margin-bottom:28px;">
+      <span style="font-weight:700; color:#1A2C4E;">Leistungen im:</span><br>
+      <span style="font-weight:700; color:#A71F38;">Arbeitsrecht</span>
+    </h2>
+
+    <p style="color:#1A2C4E; line-height:1.65; margin-bottom:16px;">Auf dem Gebiet des <strong style="color:#A71F38;">Arbeitsrechts</strong> finden Sie bei mir Rat, Unterstützung und Vertretung beispielsweise bei folgenden Problemstellungen:</p>
+
+    <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:0.85em; margin:0 0 32px 0;">
+      <li>Kündigungsrechtsstreite (ordentliche und außerordentliche Kündigung; verhaltensbedingte, personenbedingte oder betriebsbedingte Kündigung; Beendigungs- und Änderungskündigung; mit und ohne Kündigungsschutz nach dem KSchG; besonderer Kündigungsschutz)</li>
+      <li>Gestaltung / Überprüfung von Arbeitsverträgen (unbefristete oder befristete) oder sonstigen arbeitsrechtlichen Verträgen und Vereinbarungen (auch Aufhebungs- und Abwicklungsverträge)</li>
+      <li>Änderung von Arbeitsbedingungen</li>
+      <li>Vergütung (Grundgehalt, Zulagen, Entgeltfortzahlung bei Krankheit oder an Feiertagen, Urlaubsvergütung, Urlaubsgeld, Lohnerhöhungen, Prämien, Umsatzbeteiligung)</li>
+      <li>Abmahnung</li>
+      <li>Zeugnis (Zwischenzeugnis und Endzeugnis)</li>
+      <li>Arbeitsverhältnis mit Schwangeren oder Eltern in Elternzeit</li>
+      <li>Arbeitsverhältnis mit Menschen mit Behinderungen oder diesen Gleichgestellten</li>
+      <li>Abschluss, Inhalt, Änderung und Beendigung von Berufsausbildungsverträgen</li>
+      <li>Betriebliches Eingliederungsmanagement (BEM)</li>
+      <li>Rückabwicklung von Scheinselbständigkeit (Entgeltdifferenz Honorar – Lohn)</li>
+      <li>Home-Office (Grundlagen / Anspruch / vertragliche Vereinbarungen / Beendigung / Arbeitszeit / Datenschutz / Mitarbeiterüberwachung / Unfallversicherungsschutz / Arbeitsschutz, Arbeitssicherheit / Betriebsratsbeteiligung)</li>
+      <li>Kirchliches Arbeitsrecht</li>
+      <li>Beratung und Vertretung von Betriebsräten / Sachverständige gem. § 80 III BetrVG</li>
+      <li>Gestaltung / Formulierung / Auslegung von Betriebsvereinbarungen und Regelungsabreden / Interessenausgleichen und Sozialplänen</li>
+      <li>Kurzarbeit (Voraussetzungen, Anordnung, Kündigung während / trotz Kurzarbeit, Urlaub während Kurzarbeit, Nichtbewilligung von Kurzarbeitergeld) mit Kurzarbeitergeld (betriebliche, persönliche Voraussetzungen, Anzeige des Arbeitsausfalls, 2-stufiges Verfahren, Rückforderung)</li>
+    </ul>
+
+    <div style="border-top:1px solid #A71F38; margin:40px 0 40px 0;"></div>
+
+    <p style="color:#1A2C4E; line-height:1.65; margin-bottom:16px;">Meine Dienstleistungen für Sie im <strong style="color:#A71F38;">Arbeitsrecht:</strong></p>
+
+    <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:0.85em; margin:0 0 28px 0;">
+      <li>Außergerichtliche Beratung und Vertretung</li>
+      <li>Gerichtliche Vertretung (Urteilsverfahren – Beschlussverfahren / Hauptsacheverfahren – Einstweiliger Rechtsschutz / Rechtsmittelverfahren)</li>
+      <li>Vertretung vor Schlichtungsstellen (Einigungsstelle, Berufsausbildungsverhältnisse, Kirchen)</li>
+      <li>Vertretung vor Behörden (Regierungspräsidium, Integrationsamt ...)</li>
+    </ul>
+
+  </div>
+</section>
+</main>
+
+<div class="sticky-legal">© 2026 Anwaltskanzlei Andrea Knebel &middot; Zehntwiesenstr. 5 &middot; D - 76275 Ettlingen &middot; <a href="tel:+4972437655590">+ 49&nbsp;&nbsp;72 43 / 76 555 90</a> &middot; <a href="mailto:post@ak-ak.com">post@ak-ak.com</a> &middot; <a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="gesetze.html">Gesetze</a></div>
+
+</body>
+</html>
