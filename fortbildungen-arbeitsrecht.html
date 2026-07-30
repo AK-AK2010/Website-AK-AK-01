@@ -11,10 +11,12 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: Arial, Helvetica, sans-serif; padding-bottom: 40px; }
   a { color: #A71F38; text-decoration: none; }
-  a:hover { color: #841729; }
   a:focus-visible, button:focus-visible { outline: 2px solid #A71F38; outline-offset: 1px; }
-  .navlink:hover .dropdown { display: block !important; }
-  .footlink:hover { background: #A71F38; color: #fff; }
+  @media (hover: hover) and (pointer: fine) {
+    a:hover { color: #841729; }
+    .navlink:hover .dropdown { display: block !important; }
+    .footlink:hover { background: #A71F38; color: #fff; }
+  }
   .fb-year { border-bottom: 1px solid rgba(167,31,56,0.3); padding: 16px 0; }
   .fb-year:last-child { border-bottom: none; }
   .fb-year p { font-weight: 700; color: #1A2C4E; font-size: 1rem; margin-bottom: 8px; }
@@ -23,27 +25,29 @@
 
 <style>
 .hov1{text-decoration:none;}
-.hov1:hover{text-decoration:underline;}
 .hov2{color:#EDE0C4;}
-.hov2:hover{background:#A71F38;color:#FFFFFF;}
 .hov3{color:#EDE0C4;}
-.hov3:hover{background:#A71F38;color:#FFFFFF;}
 .hov4{color:#EDE0C4;}
-.hov4:hover{background:#A71F38;color:#FFFFFF;}
 .hov5{color:#EDE0C4;}
-.hov5:hover{background:#A71F38;color:#FFFFFF;}
 .hov6{color:#EDE0C4;}
-.hov6:hover{background:#A71F38;color:#FFFFFF;}
 .hov7{color:#EDE0C4;}
-.hov7:hover{background:#A71F38;color:#FFFFFF;}
 .hov8{color:#EDE0C4;}
-.hov8:hover{background:#A71F38;color:#FFFFFF;}
 .hov9{color:#EDE0C4;}
-.hov9:hover{background:#A71F38;color:#FFFFFF;}
 .hov10{color:#EDE0C4;}
-.hov10:hover{background:#A71F38;color:#FFFFFF;}
 .hov11{color:#EDE0C4;}
+@media (hover: hover) and (pointer: fine) {
+.hov1:hover{text-decoration:underline;}
+.hov2:hover{background:#A71F38;color:#FFFFFF;}
+.hov3:hover{background:#A71F38;color:#FFFFFF;}
+.hov4:hover{background:#A71F38;color:#FFFFFF;}
+.hov5:hover{background:#A71F38;color:#FFFFFF;}
+.hov6:hover{background:#A71F38;color:#FFFFFF;}
+.hov7:hover{background:#A71F38;color:#FFFFFF;}
+.hov8:hover{background:#A71F38;color:#FFFFFF;}
+.hov9:hover{background:#A71F38;color:#FFFFFF;}
+.hov10:hover{background:#A71F38;color:#FFFFFF;}
 .hov11:hover{background:#A71F38;color:#FFFFFF;}
+}
 </style>
 
 <style>
@@ -64,6 +68,8 @@
   .ak-fb-pipe{display:none !important;}
   .ak-hours-flex{flex-wrap:wrap !important;}
   .ak-hours-nowrap{white-space:normal !important;}
+  .ak-page-wrap{display:flex !important; flex-direction:column !important; min-height:100vh !important;}
+  .ak-main-grow{flex:1 !important;}
 }
 .ak-nav-mobile{display:none;}
 .ak-mobile-panel{display:none;}
@@ -79,7 +85,7 @@ function akClose(){var p=document.getElementById('ak-mobile-panel'); if(p) p.cla
 </head>
 <body>
 
-<div style="color:#1A2C4E; line-height:1.7; background:#FFFFFF;">
+<div class="ak-page-wrap" style="color:#1A2C4E; line-height:1.7; background:#FFFFFF;">
 
   <header style="position:sticky; top:0; background:#FFFFFF; z-index:100; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
     <div style="background:#FFFFFF; padding:48px 0 44px; text-align:center;" class="ak-header-pad">
@@ -162,7 +168,7 @@ function akClose(){var p=document.getElementById('ak-mobile-panel'); if(p) p.cla
     </div>
   </header>
 
-  <main>
+  <main class="ak-main-grow">
     <h1 style="position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); border:0;">Fortbildungen im Arbeitsrecht gem&auml;&szlig; &sect;&nbsp;15 FAO Ettlingen</h1>
 
     <section style="padding:56px 0 60px;">
@@ -256,7 +262,7 @@ function akClose(){var p=document.getElementById('ak-mobile-panel'); if(p) p.cla
   </main>
 
   <div class="ak-footer-legal" style="position:fixed; bottom:0; left:0; right:0; background:#1A2C4E; border-top:2px solid #A71F38; padding:6px 16px; text-align:center; z-index:99; font-size:0.85rem; font-weight:700; color:#EDE0C4; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-    &copy; 2026 Anwaltskanzlei Andrea Knebel<br class="ak-fb" /><span class="ak-fb-pipe" style="color:#EDE0C4; opacity:0.5;">|</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstra&szlig;e+5+76275+Ettlingen" target="_blank" rel="noopener" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">Zehntwiesenstra&szlig;e 5 &middot; D - 76275 Ettlingen</a><br class="ak-fb" /><span class="ak-fb-pipe" style="color:#EDE0C4; opacity:0.5;">|</span> <a href="tel:+4972437655590" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">+&nbsp;49&nbsp;&nbsp;72 43 / 76 555 90</a> <span style="color:#EDE0C4; opacity:0.5;">|</span> <a href="mailto:post@ak-ak.com" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">post@ak-ak.com</a><br class="ak-fb" /><span class="ak-fb-pipe" style="color:#EDE0C4; opacity:0.5;">|</span> <a href="impressum.html" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">Impressum</a> <span style="color:#EDE0C4; opacity:0.5;">|</span> <a href="datenschutz.html" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">Datenschutz</a> <span style="color:#EDE0C4; opacity:0.5;">|</span> <a href="gesetze.html" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">Gesetze</a>
+    &copy; 2026 Anwaltskanzlei Andrea Knebel<br class="ak-fb" /> <span class="ak-fb-pipe" style="color:#EDE0C4; opacity:0.5;">|</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstra&szlig;e+5+76275+Ettlingen" target="_blank" rel="noopener" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">Zehntwiesenstra&szlig;e 5 &middot; D - 76275 Ettlingen</a><br class="ak-fb" /> <span class="ak-fb-pipe" style="color:#EDE0C4; opacity:0.5;">|</span> <a href="tel:+4972437655590" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">+&nbsp;49&nbsp;&nbsp;72 43 / 76 555 90</a> <span style="color:#EDE0C4; opacity:0.5;">|</span> <a href="mailto:post@ak-ak.com" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">post@ak-ak.com</a><br class="ak-fb" /> <span class="ak-fb-pipe" style="color:#EDE0C4; opacity:0.5;">|</span> <a href="impressum.html" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">Impressum</a> <span style="color:#EDE0C4; opacity:0.5;">|</span> <a href="datenschutz.html" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">Datenschutz</a> <span style="color:#EDE0C4; opacity:0.5;">|</span> <a href="gesetze.html" class="footlink" style="color:#EDE0C4; padding:2px 0; border-radius:2px;">Gesetze</a>
   </div>
 </div>
 
