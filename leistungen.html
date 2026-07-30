@@ -43,27 +43,51 @@
 .hov12{color:#EDE0C4;}
 .hov12:hover{background:#A71F38;color:#FFFFFF;}
 </style>
+
+<style>
+@media (max-width: 880px) {
+  .ak-header-pad{padding:28px 0 22px !important;}
+  .ak-n1{font-size:28px !important;}
+  .ak-n2{font-size:24px !important;}
+  .ak-sub{font-size:14px !important;}
+  .ak-meta{font-size:12px !important;}
+  .ak-nav-desktop{display:none !important;}
+  .ak-nav-mobile{display:flex !important;}
+  .ak-grid3{grid-template-columns:1fr !important;}
+  .ak-hero-flex{flex-direction:column !important;}
+  .ak-hero-divider{display:none !important;}
+}
+.ak-nav-mobile{display:none;}
+.ak-mobile-panel{display:none;}
+.ak-mobile-panel.open{display:block;}
+.ak-sub-panel{display:none;}
+.ak-sub-panel.open{display:block;}
+</style>
+<script>
+function akToggle(id){var el=document.getElementById(id); if(el) el.classList.toggle('open');}
+function akClose(){var p=document.getElementById('ak-mobile-panel'); if(p) p.classList.remove('open');}
+</script>
 </head>
 <body>
 
 <div style="color:#1A2C4E; line-height:1.7; background:#FFFFFF;">
 
   <header style="position:sticky; top:0; background:#FFFFFF; z-index:100; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
-    <div style="background:#FFFFFF; padding:48px 0 44px; text-align:center;">
+    <div style="background:#FFFFFF; padding:48px 0 44px; text-align:center;" class="ak-header-pad">
       <div style="max-width:1140px; margin:0 auto; padding:0 24px;">
         <a href="index.html"><div style="font-weight:700; color:#A71F38; letter-spacing:0.05em; line-height:1.3;">
-          <span style="font-size:46px;">A</span><span style="font-size:40px;">NWALTS</span><span style="font-size:46px;">K</span><span style="font-size:40px;">ANZLEI&nbsp;</span><span style="font-size:46px;">A</span><span style="font-size:40px;">NDREA&nbsp;</span><span style="font-size:46px;">K</span><span style="font-size:40px;">NEBEL</span>
+          <span style="font-size:46px;" class="ak-n1">A</span><span style="font-size:40px;" class="ak-n2">NWALTS</span><span style="font-size:46px;" class="ak-n1">K</span><span style="font-size:40px;" class="ak-n2">ANZLEI&nbsp;</span><span style="font-size:46px;" class="ak-n1">A</span><span style="font-size:40px;" class="ak-n2">NDREA&nbsp;</span><span style="font-size:46px;" class="ak-n1">K</span><span style="font-size:40px;" class="ak-n2">NEBEL</span>
         </div></a>
-        <div style="font-size:21px; font-weight:400; color:#A71F38; letter-spacing:0.05em; text-transform:uppercase; margin-top:8px;">
+        <div style="font-size:21px; font-weight:400; color:#A71F38; letter-spacing:0.05em; text-transform:uppercase; margin-top:8px;" class="ak-sub">
           Kanzlei f&uuml;r Arbeits- und Sozialrecht
         </div>
-        <div style="font-size:16px; font-weight:400; color:#A71F38; margin-top:10px; letter-spacing:0.01em;">
+        <div style="font-size:16px; font-weight:400; color:#A71F38; margin-top:10px; letter-spacing:0.01em;" class="ak-meta">
           Rechtsanw&auml;ltin &middot; Fachanw&auml;ltin f&uuml;r Arbeitsrecht &middot; Fachanw&auml;ltin f&uuml;r Sozialrecht &middot; <a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstra&szlig;e+5+76275+Ettlingen" target="_blank" rel="noopener" style="color:#A71F38" class="hov1">D - 76275 Ettlingen</a>
         </div>
       </div>
     </div>
 
-    <div style="background:#1A2C4E; border-top:2px solid #A71F38; border-bottom:2px solid #A71F38;">
+    <div class="ak-nav-desktop" style="background:#1A2C4E; border-top:2px solid #A71F38; border-bottom:2px solid #A71F38;">
       <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; justify-content:center;">
         <ul style="display:flex; gap:0; list-style:none; font-size:0.88rem;">
           <li><a href="index.html" aria-label="Home" style="display:block; padding:16px 22px; font-weight:700" class="hov2"><i class="ti ti-home" style="font-size:20px; vertical-align:-3px;"></i></a></li>
@@ -91,6 +115,42 @@
         </ul>
       </div>
     </div>
+    <div class="ak-nav-mobile" style="background:#1A2C4E; border-top:2px solid #A71F38; border-bottom:2px solid #A71F38; align-items:center; justify-content:space-between; padding:0 20px;">
+      <span style="color:#EDE0C4; font-weight:700; font-size:14px; letter-spacing:0.03em;">Men&uuml;</span>
+      <button type="button" onclick="akToggle('ak-mobile-panel')" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 4px; cursor:pointer; display:flex; align-items:center;">
+        <i class="ti ti-menu-2" style="font-size:26px; color:#EDE0C4;"></i>
+      </button>
+    </div>
+    <div id="ak-mobile-panel" class="ak-mobile-panel" style="background:#1A2C4E; border-bottom:2px solid #A71F38;">
+      <ul style="list-style:none; font-size:0.95rem;">
+        <li><a href="index.html" onclick="akClose()" style="display:block; padding:14px 20px; color:#EDE0C4; font-weight:700;">Startseite</a></li>
+        <li style="border-top:1px solid rgba(237,224,196,0.15);"><a href="kanzlei.html" onclick="akClose()" style="display:block; padding:14px 20px; color:#EDE0C4; font-weight:700;">Kanzlei</a></li>
+        <li style="border-top:1px solid rgba(237,224,196,0.15);">
+          <button type="button" onclick="akToggle('ak-sub-l')" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:14px 20px; color:#FFFFFF; background:#A71F38; font-weight:700; background:none; border:none; text-align:left; font-size:0.95rem; cursor:pointer;">
+            <span>Leistungen</span><i class="ti ti-chevron-down" style="font-size:16px;"></i>
+          </button>
+          <div id="ak-sub-l" class="ak-sub-panel open" style="background:#12233d;">
+            <a href="leistungen.html" onclick="akClose()" style="display:block; padding:12px 20px 12px 32px; color:#FFFFFF; background:#A71F38; font-size:0.88rem;">&Uuml;bersicht</a>
+            <a href="leistungen-arbeitsrecht.html" onclick="akClose()" style="display:block; padding:12px 20px 12px 32px; color:#EDE0C4; font-size:0.88rem;">Arbeitsrecht</a>
+            <a href="leistungen-sozialrecht.html" onclick="akClose()" style="display:block; padding:12px 20px 12px 32px; color:#EDE0C4; font-size:0.88rem;">Sozialrecht</a>
+            <a href="leistungen-vorsorgeplanung.html" onclick="akClose()" style="display:block; padding:12px 20px 12px 32px; color:#EDE0C4; font-size:0.88rem;">Vorsorgeplanung</a>
+          </div>
+        </li>
+        <li style="border-top:1px solid rgba(237,224,196,0.15);"><a href="vita.html" onclick="akClose()" style="display:block; padding:14px 20px; color:#EDE0C4; font-weight:700;">Vita</a></li>
+        <li style="border-top:1px solid rgba(237,224,196,0.15);">
+          <button type="button" onclick="akToggle('ak-sub-f')" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:14px 20px; color:#EDE0C4; font-weight:700; background:none; border:none; text-align:left; font-size:0.95rem; cursor:pointer;">
+            <span>Fachanwalt</span><i class="ti ti-chevron-down" style="font-size:16px;"></i>
+          </button>
+          <div id="ak-sub-f" class="ak-sub-panel" style="background:#12233d;">
+            <a href="fachanwalt.html" onclick="akClose()" style="display:block; padding:12px 20px 12px 32px; color:#EDE0C4; font-size:0.88rem;">&Uuml;bersicht</a>
+            <a href="fortbildungen-arbeitsrecht.html" onclick="akClose()" style="display:block; padding:12px 20px 12px 32px; color:#EDE0C4; font-size:0.88rem;">Fortbildungen Arbeitsrecht</a>
+            <a href="fortbildungen-sozialrecht.html" onclick="akClose()" style="display:block; padding:12px 20px 12px 32px; color:#EDE0C4; font-size:0.88rem;">Fortbildungen Sozialrecht</a>
+          </div>
+        </li>
+        <li style="border-top:1px solid rgba(237,224,196,0.15);"><a href="kosten.html" onclick="akClose()" style="display:block; padding:14px 20px; color:#EDE0C4; font-weight:700;">Kosten</a></li>
+        <li style="border-top:1px solid rgba(237,224,196,0.15);"><a href="kontakt.html" onclick="akClose()" style="display:block; padding:14px 20px; color:#EDE0C4; font-weight:700;">Kontakt</a></li>
+      </ul>
+    </div>
   </header>
 
   <main>
@@ -114,7 +174,7 @@
           <li>Erstellung von Vorsorgedokumenten und Beratung hierzu</li>
         </ul>
 
-        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;">
+        <div class="ak-grid3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;">
 
           <div style="padding:34px 28px; border:1px solid rgba(167,31,56,0.3); border-radius:4px; box-shadow:0 1px 6px rgba(0,0,0,0.05); display:flex; flex-direction:column;">
             <div style="width:52px; height:52px; margin-bottom:20px;">
